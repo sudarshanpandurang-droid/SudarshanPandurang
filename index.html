@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudarshan Pandurang — Corporate Trainer &amp; Design Thinking Practitioner</title>
+<meta name="description" content="Sudarshan Pandurang helps leaders and teams solve real business problems through design thinking and behavioral training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --paper: #F3F4EE;
+    --paper-line: #DBD6C2;
+    --card: #FFFDF6;
+    --ink: #21261F;
+    --ink-soft: #565C50;
+    --teal: #1F7A6C;
+    --teal-dim: #E4EEEA;
+    --amber: #E5A335;
+    --amber-dim: #FBEED9;
+    --coral: #C1462B;
+    --coral-dim: #F6E2DB;
+    --radius-card: 3px;
+    --shadow-card: 0 10px 22px -12px rgba(33,38,31,0.28), 0 2px 4px -1px rgba(33,38,31,0.12);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background-color: var(--paper);
+    background-image: radial-gradient(var(--paper-line) 1px, transparent 1px);
+    background-size: 22px 22px;
+    color: var(--ink);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Bricolage Grotesque', sans-serif;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  .eyebrow{
+    font-family:'Space Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color: var(--ink-soft);
+  }
+
+  a{ color:inherit; }
+  img{ max-width:100%; display:block; }
+
+  :focus-visible{
+    outline: 2.5px solid var(--teal);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(243,244,238,0.88);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--paper-line);
+  }
+
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 18px 32px;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .wordmark{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:700;
+    font-size: 19px;
+    text-decoration:none;
+  }
+  .wordmark span{ color: var(--teal); }
+
+  nav{ display:flex; align-items:center; gap:4px; }
+
+  .tab{
+    font-family:'Space Mono', monospace;
+    font-size: 12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    text-decoration:none;
+    color: var(--ink-soft);
+    padding: 9px 14px;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid transparent;
+  }
+  .tab:hover{
+    color: var(--ink);
+    background: var(--card);
+    border-color: var(--paper-line);
+    border-bottom-color: var(--card);
+  }
+
+  .stamp-btn{
+    font-family:'Space Mono', monospace;
+    font-size: 12.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    text-decoration:none;
+    color: var(--ink);
+    background: var(--amber-dim);
+    border: 1.5px dashed var(--ink);
+    padding: 9px 16px;
+    border-radius: 3px;
+    display:inline-block;
+    transform: rotate(-1.2deg);
+    transition: transform 0.15s ease, background 0.15s ease;
+    white-space: nowrap;
+  }
+  .stamp-btn:hover{
+    transform: rotate(0deg) scale(1.03);
+    background: var(--amber);
+  }
+
+  @media (max-width: 760px){
+    nav .tab{ display:none; }
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero{
+    padding: 96px 0 80px;
+  }
+
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.05fr 0.85fr;
+    gap: 56px;
+    align-items:center;
+  }
+
+  .hero h1{
+    font-size: clamp(34px, 4.6vw, 54px);
+    line-height: 1.06;
+    margin: 18px 0 22px;
+    font-weight: 800;
+  }
+  .hero h1 em{
+    font-style: normal;
+    color: var(--teal);
+  }
+
+  .hero p.lede{
+    font-size: 17.5px;
+    line-height:1.6;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0 0 30px;
+  }
+
+  .hero-ctas{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+
+  .link-arrow{
+    font-family:'Space Mono', monospace;
+    font-size:13px;
+    text-decoration:none;
+    color: var(--ink);
+    border-bottom: 1.5px solid var(--ink);
+    padding-bottom:2px;
+  }
+  .link-arrow:hover{ color: var(--teal); border-color: var(--teal); }
+
+  /* Sticky-note wall signature */
+  .wall{
+    position:relative;
+    height: 360px;
+  }
+  .note{
+    position:absolute;
+    width: 152px;
+    padding: 16px 16px 14px;
+    background: var(--card);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    font-family:'Space Mono', monospace;
+  }
+  .note .num{
+    font-size:11px;
+    color: var(--ink-soft);
+    letter-spacing:0.06em;
+  }
+  .note .label{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight:700;
+    font-size: 17px;
+    margin-top:6px;
+    color: var(--ink);
+  }
+  .note::before{
+    content:"";
+    position:absolute;
+    top:-7px; left:50%;
+    transform: translateX(-50%);
+    width:14px; height:14px;
+    background: var(--coral);
+    border-radius:50%;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+  }
+
+  .n1{ top: 4%;  left: 4%;  transform: rotate(-6deg); background: var(--teal-dim); }
+  .n2{ top: 0%;  left: 44%; transform: rotate(4deg); }
+  .n3{ top: 30%; left: 66%; transform: rotate(-3deg); background: var(--amber-dim); }
+  .n4{ top: 40%; left: 16%; transform: rotate(7deg); }
+  .n5{ top: 62%; left: 46%; transform: rotate(-5deg); background: var(--coral-dim); }
+
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns: 1fr; }
+    .wall{ height: 300px; margin-top: 10px; }
+    .note{ width: 128px; padding: 13px 13px 11px; }
+  }
+
+  /* ---------- STRIP ---------- */
+
+  .strip{
+    border-top: 1px solid var(--paper-line);
+    border-bottom: 1px solid var(--paper-line);
+    padding: 26px 0;
+    overflow:hidden;
+  }
+  .strip-track{
+    display:flex;
+    gap: 14px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+  .credential{
+    font-family:'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing:0.03em;
+    color: var(--ink-soft);
+    border: 1px solid var(--paper-line);
+    background: var(--card);
+    padding: 7px 13px;
+    border-radius: 20px;
+  }
+
+  /* ---------- SECTION HEADS ---------- */
+
+  section{ padding: 84px 0; }
+
+  .section-head{
+    max-width: 620px;
+    margin: 0 0 46px;
+  }
+  .section-head h2{
+    font-size: clamp(26px, 3vw, 36px);
+    margin-top: 12px;
+    font-weight: 700;
+  }
+  .section-head p{
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height:1.6;
+    margin-top: 12px;
+  }
+
+  /* ---------- PROGRAMS (corkboard) ---------- */
+
+  .corkboard{
+    background:
+      radial-gradient(circle at 1px 1px, rgba(33,38,31,0.05) 1px, transparent 0) ;
+    background-size: 14px 14px;
+    background-color: #ECE7D6;
+    border-radius: 10px;
+    padding: 52px 40px;
+    border: 1px solid var(--paper-line);
+  }
+
+  .program-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .program-card{
+    background: var(--card);
+    border-radius: var(--radius-card);
+    padding: 24px 22px 22px;
+    box-shadow: var(--shadow-card);
+    position:relative;
+  }
+  .program-card::before{
+    content:"";
+    position:absolute;
+    top:-8px; left: 22px;
+    width: 30px; height:14px;
+    background: rgba(200,196,178,0.85);
+    transform: rotate(-4deg);
+    border-radius: 1px;
+  }
+
+  .program-card:nth-child(1){ transform: rotate(-1.4deg); }
+  .program-card:nth-child(2){ transform: rotate(0.9deg); }
+  .program-card:nth-child(3){ transform: rotate(-0.6deg); }
+  .program-card:nth-child(4){ transform: rotate(1.2deg); }
+  .program-card:nth-child(5){ transform: rotate(-0.9deg); }
+  .program-card:nth-child(6){ transform: rotate(0.7deg); }
+  .program-card:hover{ transform: rotate(0deg) translateY(-3px); transition: 0.18s ease; }
+
+  .program-icon{
+    width: 38px; height: 38px;
+    color: var(--teal);
+    margin-bottom: 14px;
+  }
+  .program-card h3{
+    font-size: 18px;
+    font-weight:700;
+    margin-bottom: 8px;
+  }
+  .program-card p{
+    font-size: 14px;
+    line-height:1.55;
+    color: var(--ink-soft);
+    margin: 0 0 14px;
+  }
+  .program-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-bottom: 12px;
+  }
+  .duration-tag{
+    font-family:'Space Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color: var(--teal);
+    background: var(--teal-dim);
+    padding: 3px 8px;
+    border-radius: 20px;
+  }
+  .program-for{
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    border-top: 1px dashed var(--paper-line);
+    padding-top: 10px;
+    margin-top: 4px;
+  }
+  .program-for strong{
+    color: var(--ink);
+    font-weight:600;
+  }
+
+  @media (max-width: 900px){
+    .program-grid{ grid-template-columns: 1fr 1fr; }
+    .corkboard{ padding: 36px 20px; }
+  }
+  @media (max-width: 620px){
+    .program-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- APPROACH (quadrants) ---------- */
+
+  .quadrant-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--paper-line);
+    border: 1px solid var(--paper-line);
+    border-radius: 10px;
+    overflow:hidden;
+  }
+  .quadrant-card{
+    background: var(--card);
+    padding: 30px 24px;
+    position:relative;
+  }
+  .quadrant-card:nth-child(1){ background: var(--amber-dim); }
+  .quadrant-card:nth-child(2){ background: var(--teal-dim); }
+  .quadrant-card:nth-child(3){ background: var(--card); }
+  .quadrant-card:nth-child(4){ background: var(--coral-dim); }
+
+  .q-num{
+    font-family:'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .quadrant-card h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .quadrant-card p{
+    font-size: 13.5px;
+    line-height:1.55;
+    color: var(--ink-soft);
+    margin:0;
+  }
+
+  @media (max-width: 860px){
+    .quadrant-grid{ grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 520px){
+    .quadrant-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- ABOUT ---------- */
+
+  .about-grid{
+    display:grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+    align-items:start;
+  }
+  .about-grid p{
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+  }
+  .about-grid strong{ color: var(--ink); }
+
+  .stat-block{
+    background: var(--card);
+    border: 1px solid var(--paper-line);
+    border-radius: var(--radius-card);
+    padding: 26px;
+  }
+  .stat-block .big{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    color: var(--teal);
+    line-height:1;
+  }
+  .stat-block .cap{
+    font-family:'Space Mono', monospace;
+    font-size: 11.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+  .stat-block hr{
+    border:none;
+    border-top:1px solid var(--paper-line);
+    margin: 22px 0;
+  }
+
+  @media (max-width: 860px){
+    .about-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- CTA / FOOTER ---------- */
+
+  .cta{
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 12px;
+    padding: 64px 48px;
+    text-align:center;
+    margin: 0 32px;
+  }
+  .cta .eyebrow{ color: #A9AF9E; }
+  .cta h2{
+    color: #FBFAF4;
+    font-size: clamp(26px, 3.6vw, 40px);
+    margin: 14px 0 26px;
+  }
+  .cta .stamp-btn{
+    background: var(--amber);
+    border-color: var(--paper);
+    font-size: 13.5px;
+    padding: 12px 22px;
+  }
+
+  footer{
+    padding: 40px 32px 60px;
+    text-align:center;
+  }
+  footer p{
+    font-family:'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 640px){
+    .wrap{ padding: 0 20px; }
+    .header-inner{ padding: 16px 20px; }
+    section{ padding: 60px 0; }
+    .cta{ margin: 0 20px; padding: 48px 26px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition:none !important; }
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#top" class="wordmark">Sudarshan<span>.</span>Pandurang</a>
+    <nav>
+      <a class="tab" href="#programs">Programs</a>
+      <a class="tab" href="#approach">Approach</a>
+      <a class="tab" href="#about">About</a>
+      <a class="tab" href="#contact">Contact</a>
+      <a class="stamp-btn" href="#contact">Book a session</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">25+ years · behavioral training · design thinking</p>
+        <h1>Better teams aren't born.<br>They're <em>facilitated</em>.</h1>
+        <p class="lede">Sudarshan Pandurang helps leaders and teams solve real business problems through design thinking and behavioral training — built for the room, not the slide deck.</p>
+        <div class="hero-ctas">
+          <a class="stamp-btn" href="#contact">Book a session</a>
+          <a class="link-arrow" href="#programs">See the programs ↓</a>
+        </div>
+      </div>
+
+      <div class="wall" aria-hidden="true">
+        <div class="note n1"><div class="num">01</div><div class="label">Empathize</div></div>
+        <div class="note n2"><div class="num">02</div><div class="label">Define</div></div>
+        <div class="note n3"><div class="num">03</div><div class="label">Ideate</div></div>
+        <div class="note n4"><div class="num">04</div><div class="label">Prototype</div></div>
+        <div class="note n5"><div class="num">05</div><div class="label">Test</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap strip-track">
+      <span class="credential">IIT Bombay</span>
+      <span class="credential">NID Ahmedabad</span>
+      <span class="credential">Dale Carnegie Certified</span>
+      <span class="credential">Vogue Institute</span>
+      <span class="credential">PES University</span>
+      <span class="credential">DJ Academy of Design</span>
+      <span class="credential">Nitte University</span>
+    </div>
+  </div>
+
+  <section id="programs">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The program matrix</p>
+        <h2>Six workshops. One facilitation style.</h2>
+        <p>Every program combines activities, simulations, team exercises, and real business problems — built for engagement, reflection, practice, and workplace application, not a lecture with slides.</p>
+      </div>
+
+      <div class="corkboard">
+        <div class="program-grid">
+
+          <div class="program-card">
+            <svg class="program-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="24" cy="14" r="6"/><path d="M24 20c-7 0-11 5-11 12h22c0-7-4-12-11-12z"/><path d="M14 10l4 4M34 10l-4 4"/></svg>
+            <h3>Leadership Through Design Thinking</h3>
+            <div class="program-meta"><span class="duration-tag">1–3 Days</span></div>
+            <p>Helping leaders foster innovation, lead through ambiguity, and build customer-centric, high-performing teams.</p>
+            <div class="program-for"><strong>Best for:</strong> Senior leaders, business heads, managers, innovation leaders</div>
+          </div>
+
+          <div class="program-card">
+            <svg class="program-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="24" cy="12" r="5"/><circle cx="10" cy="34" r="5"/><circle cx="38" cy="34" r="5"/><path d="M24 17v8M17 30l4-4M31 30l-4-4"/></svg>
+            <h3>Facilitation Skills</h3>
+            <div class="program-meta"><span class="duration-tag">1–3 Days</span></div>
+            <p>Helping professionals design and facilitate engaging, outcome-oriented workshops, meetings, and learning experiences.</p>
+            <div class="program-for"><strong>Best for:</strong> L&amp;D managers, HR professionals, project managers, Scrum masters</div>
+          </div>
+
+          <div class="program-card">
+            <svg class="program-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="14" cy="24" r="6"/><circle cx="34" cy="24" r="6"/><path d="M20 24h8" stroke-dasharray="3 3"/></svg>
+            <h3>Service Design</h3>
+            <div class="program-meta"><span class="duration-tag">1–3 Days</span></div>
+            <p>Designing better customer and employee experiences by understanding journeys, touchpoints, service ecosystems, and the people behind them.</p>
+            <div class="program-for"><strong>Best for:</strong> CX teams, product &amp; service teams, operations teams</div>
+          </div>
+
+          <div class="program-card">
+            <svg class="program-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="24" cy="16" r="8"/><path d="M20 30h8M22 34h4"/><path d="M24 8V5M13 12l-2-2M35 12l2-2"/></svg>
+            <h3>Innovation &amp; Creative Problem Solving</h3>
+            <div class="program-meta"><span class="duration-tag">1–3 Days</span></div>
+            <p>Helping teams solve business challenges through structured creativity, collaborative thinking, and innovation tools.</p>
+            <div class="program-for"><strong>Best for:</strong> Managers, team leaders, product &amp; ops teams</div>
+          </div>
+
+          <div class="program-card">
+            <svg class="program-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="18" cy="18" r="9"/><path d="M18 13v5l4 3"/><path d="M28 24h12M36 18l4 6-4 6"/></svg>
+            <h3>Design Sprint</h3>
+            <div class="program-meta"><span class="duration-tag">2–5 Days</span></div>
+            <p>Accelerating innovation by rapidly moving from a real business challenge to a validated, tested solution.</p>
+            <div class="program-for"><strong>Best for:</strong> Teams with an existing challenge, new product idea, or CX problem</div>
+          </div>
+
+          <div class="program-card">
+            <svg class="program-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="20" cy="14" r="9" opacity="0.55"/><circle cx="28" cy="14" r="9" opacity="0.55"/><circle cx="24" cy="21" r="9" opacity="0.55"/></svg>
+            <h3>Design Thinking Fundamentals</h3>
+            <div class="program-meta"><span class="duration-tag">Half Day–2 Days</span></div>
+            <p>Helping teams solve complex business challenges through human-centred thinking, collaboration, and rapid experimentation.</p>
+            <div class="program-for"><strong>Best for:</strong> Managers, team leads, innovation &amp; product teams new to Design Thinking</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The approach</p>
+        <h2>Behavioral skills, not just frameworks.</h2>
+        <p>Unlike conventional Design Thinking programmes that primarily teach tools, every programme integrates the behavioral skills that actually make innovation stick — following a four-quadrant learning path.</p>
+      </div>
+
+      <div class="quadrant-grid">
+        <div class="quadrant-card">
+          <div class="q-num">01</div>
+          <h3>Buy-in</h3>
+          <p>Getting participants' agreement on the topic and helping them understand why it's relevant to their own work.</p>
+        </div>
+        <div class="quadrant-card">
+          <div class="q-num">02</div>
+          <h3>Knowledge</h3>
+          <p>Sharing the relevant concepts, best practices, frameworks, and techniques — the tools, taught with intent.</p>
+        </div>
+        <div class="quadrant-card">
+          <div class="q-num">03</div>
+          <h3>Practice</h3>
+          <p>Participants practice individually and in groups, receiving live feedback from the facilitator and their peers.</p>
+        </div>
+        <div class="quadrant-card">
+          <div class="q-num">04</div>
+          <h3>Application</h3>
+          <p>Participants commit to applying what they've learned back in their actual workplace — not just in the room.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="stat-block">
+        <div class="big">25+</div>
+        <div class="cap">Years building &amp; leading design departments, training corporates</div>
+        <hr>
+        <div class="big">2023</div>
+        <div class="cap">Top award at UNLEASH, Infosys — for his Design Thinking methodology</div>
+      </div>
+
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 style="margin: 10px 0 18px; font-size: clamp(24px,3vw,32px);">A trainer's toolkit, a designer's process.</h2>
+        <p>Sudarshan Pandurang is a <strong>design educator, academic leader, corporate trainer, and entrepreneur</strong> with over 25 years of experience building and leading design departments, and delivering world-class training to leading corporates across India.</p>
+        <p>His core competencies — <strong>Behavioral Training and Design Thinking</strong> — let him bridge people development with innovation challenges: Design Thinking Fundamentals, Human-Centred Design, Service Design, Creativity and Innovation, and Systems Thinking, alongside leadership programs in communication, interpersonal effectiveness, and team building.</p>
+        <p>His experience spans corporate training at <strong>Dale Carnegie and Pearson</strong>, and establishing and teaching in design departments at Vogue Institute of Fashion Technology, PES University, DJ Academy of Design, Acharya School of Design, and Nitte University — serving as <strong>Head of Department</strong> at three of them.</p>
+        <p>He's a certified <strong>Dale Carnegie Trainer</strong>, a postgraduate in Geology from <strong>IIT Bombay</strong>, and holds a Diploma in Design from <strong>IDI, Surat</strong> plus an industry certificate from <strong>NID, Ahmedabad</strong>. He is currently building a sustainable design venture crafting handcrafted luminaires from bamboo and cane.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="cta">
+      <p class="eyebrow">Let's get started</p>
+      <h2>Put your team on the wall.</h2>
+      <a class="stamp-btn" href="mailto:hello@sudarshanpandurang.com">Book a session</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Sudarshan Pandurang · Bengaluru, India</p>
+</footer>
+
+</body>
+</html>
